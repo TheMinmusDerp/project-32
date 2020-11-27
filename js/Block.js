@@ -26,16 +26,16 @@ class Block{
     else{
       World.remove(world, this.body);
       push();
-      this.Visiblity = this.Visiblity - 5;
-      tint(255,this.Visiblity);
+      this.visiblity = this.visiblity - 5;
+      tint(255,this.visiblity);
       rectMode(CENTER);
       rect(-100, -100, this.width, this.height);
       pop();
     }
   }
   score(){
-    if (this.Visiblity < 0 && this.Visiblity > -1005){
-      score=score+1;
+    if(this.visibility<0 && this.visibility > -105) {
+      score++;
     }
   }
 }
