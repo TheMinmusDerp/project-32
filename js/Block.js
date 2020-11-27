@@ -7,6 +7,7 @@ class Block{
         //isStatic:true
         
     }
+    this.Visibility = 255;
     this.body = Bodies.rectangle(x, y, width, height, options);
     this.width = width;
     this.height = height;
@@ -26,15 +27,15 @@ class Block{
     else{
       World.remove(world, this.body);
       push();
-      this.visiblity = this.visiblity - 5;
-      tint(255,this.visiblity);
-      rectMode(CENTER);
-      rect(-100, -100, this.width, this.height);
+      this.Visibility = this.Visibility - 5;
+      //tint(255,this.visiblity);
+      //rectMode(CENTER);
+      //rect(-100, -100, this.width, this.height);
       pop();
     }
   }
   score(){
-    if(this.visibility<0 && this.visibility > -105) {
+    if(this.Visibility<0 && this.Visibility > -105) {
       score++;
     }
   }
